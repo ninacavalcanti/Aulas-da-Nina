@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+/*
+font-family: 'Inconsolata', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+:root{
+    --positive-color: rgb(0, 100, 0);
+    --primary: #9A90A9;
+    --secondary: #7AA49D;
+
+    --transparent: transparent;
+    --white: #fff;
+    --lightergrey: #eee;
+    --lightgrey: #ddd;
+    --grey: #ccc;
+    --greyer: #aaa;
+    --darkgrey: #555;
+    --darkergrey: #333;
+    --black: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    color:inherit;
+}
+body{
+    background-color: var(--lightergrey);
+}
+
+/* ============================== */
+
+.button{
+    outline: none;
+    border: 1px solid var(--primary);
+    padding: 8px;
+    transition: 0.15s;
+    border-radius: 4px;
+}
+.button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to left, var(--primary), var(--secondary));
+    color: var(--white);
+    border: 1px solid var(--transparent);
+}
+
+/* ============================== */
+
+header{
+    background-image: url(./imagens/header-image.jpg);
+    background-size: cover;
+    position: relative;
+    height: 250px;
+    box-shadow: 0 0 0.4em var(--greyer);
+    display: flex;
+    justify-content: flex-end;
+}
+header>#img-perfil{
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 0 0.4em var(--greyer);
+    border: 3px solid var(--primary);
+}
+header>h1{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--white);
+    white-space: nowrap;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+header>nav{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 220px;
+    justify-content: space-between;
+    color: var(--white);
+    margin-right: 30px;
+}
+header>nav>a:hover{
+    color: var(--lightergrey)
+}
+.nav-divider{
+    height: 20px;
+    width: 1px;
+    background-color: var(--white);
+}
+
+#link-escola{
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.cards{
+    width: 130px;
+    margin: 0 10px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 0 0.2em var(--greyer);
+    overflow: hidden;
+}
+.cards>p{
+    font-size: 13px;
+    margin: 2px 7px 2px 16px;
+}
+.cards>button{
+    margin: 15px;
+}
+.card-header{
+    text-align: center;
+    background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+}
+.card-header>h2{
+    font-size: 17px;
+    color: var(--white);
+    margin-bottom: 3px;
+}
+
+#sobre-mim{
+    background-color: var(--lightgrey);
+    height: 300px;
+}
