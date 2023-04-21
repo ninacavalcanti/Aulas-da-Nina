@@ -4,27 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=DM+Sans&family=DM+Serif+Display&family=Libre+Baskerville&family=Libre+Franklin:wght@300&family=Lora&family=Tajawal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display');
 
 /*
-font-family: 'Abhaya Libre', serif; NOPE
-font-family: 'DM Sans', sans-serif; HMMMMMMM
 font-family: 'DM Serif Display', serif; okaaaay
-font-family: 'Libre Baskerville', serif; NOPE
-font-family: 'Libre Franklin', sans-serif; NOPE
-font-family: 'Lora', serif; NOPE
-font-family: 'Tajawal', sans-serif; NOPE
 
 font-family: 'Inconsolata', monospace;
 font-family: 'Inter', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
+
 :root{
     --positive-color: rgb(0, 100, 0);
     --primary: #9A90A9;
     --secondary: #7AA49D;
-    --tertiary: #E7EDDE;
-    --fourth: #EEF1E9;
+    --tertiary: #EEF1E9;
 
     --transparent: transparent;
     --white: #fff;
@@ -58,6 +52,7 @@ body{
     padding: 8px;
     transition: 0.15s;
     border-radius: 4px;
+    color: var(--darkgrey);
 }
 .button:hover{
     cursor: pointer;
@@ -91,7 +86,7 @@ header>h1{
     top: 85px;
     left: 50%;
     transform: translate(-50%);
-    color: var(--fourth);
+    color: var(--tertiary);
     white-space: nowrap;
     font-family: 'DM Serif Display', serif;
     letter-spacing: 0.1em;
@@ -103,7 +98,7 @@ header>nav{
     height: 80px;
     width: 290px;
     justify-content: space-between;
-    color: var(--fourth);
+    color: var(--tertiary);
     margin-right: 30px;
     font-size: 12px;
 }
@@ -116,7 +111,7 @@ header>nav>a:hover{
 .nav-divider{
     height: 20px;
     width: 1px;
-    background-color: var(--fourth);
+    background-color: var(--tertiary);
 }
 
 #link-escola{
@@ -128,7 +123,7 @@ header>nav>a:hover{
     padding: 0 20px;
 }
 .cards{
-    width: 130px;
+    width: 280px;
     margin: 0 10px 30px;
     display: flex;
     flex-direction: column;
@@ -139,6 +134,7 @@ header>nav>a:hover{
 .cards>p{
     font-size: 13px;
     margin: 2px 7px 2px 16px;
+    color: var(--darkgrey);
 }
 .cards>button{
     margin: 15px;
@@ -152,7 +148,7 @@ header>nav>a:hover{
 }
 .card-header>h2{
     font-size: 17px;
-    color: var(--white);
+    color: var(--tertiary);
     margin-bottom: 3px;
 }
 
