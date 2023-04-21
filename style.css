@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=DM+Sans&family=DM+Serif+Display&family=Libre+Baskerville&family=Libre+Franklin:wght@300&family=Lora&family=Tajawal&display=swap');
+
 /*
+font-family: 'Abhaya Libre', serif; NOPE
+font-family: 'DM Sans', sans-serif; HMMMMMMM
+font-family: 'DM Serif Display', serif; okaaaay
+font-family: 'Libre Baskerville', serif; NOPE
+font-family: 'Libre Franklin', sans-serif; NOPE
+font-family: 'Lora', serif; NOPE
+font-family: 'Tajawal', sans-serif; NOPE
+
 font-family: 'Inconsolata', monospace;
 font-family: 'Inter', sans-serif;
 font-family: 'Poppins', sans-serif;
@@ -11,6 +23,8 @@ font-family: 'Poppins', sans-serif;
     --positive-color: rgb(0, 100, 0);
     --primary: #9A90A9;
     --secondary: #7AA49D;
+    --tertiary: #E7EDDE;
+    --fourth: #EEF1E9;
 
     --transparent: transparent;
     --white: #fff;
@@ -48,7 +62,7 @@ body{
 .button:hover{
     cursor: pointer;
     background-image: linear-gradient(to left, var(--primary), var(--secondary));
-    color: var(--white);
+    color: var(--tertiary);
     border: 1px solid var(--transparent);
 }
 
@@ -74,30 +88,35 @@ header>#img-perfil{
 }
 header>h1{
     position: absolute;
-    top: 80px;
+    top: 85px;
     left: 50%;
     transform: translate(-50%);
-    color: var(--white);
+    color: var(--fourth);
     white-space: nowrap;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'DM Serif Display', serif;
+    letter-spacing: 0.1em;
 }
 
 header>nav{
     display: flex;
     align-items: center;
     height: 80px;
-    width: 220px;
+    width: 290px;
     justify-content: space-between;
-    color: var(--white);
+    color: var(--fourth);
     margin-right: 30px;
+    font-size: 12px;
+}
+header>nav>a{
+    transition: 0.2s;
 }
 header>nav>a:hover{
-    color: var(--lightergrey)
+    color: var(--white);
 }
 .nav-divider{
     height: 20px;
     width: 1px;
-    background-color: var(--white);
+    background-color: var(--fourth);
 }
 
 #link-escola{
@@ -140,4 +159,9 @@ header>nav>a:hover{
 #sobre-mim{
     background-color: var(--lightgrey);
     height: 300px;
+}
+
+footer{
+    height: 200px;
+    background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
 }
