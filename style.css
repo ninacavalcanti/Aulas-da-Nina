@@ -84,13 +84,14 @@ header>#img-perfil{
 }
 header>h1{
     position: absolute;
-    top: 85px;
+    top: 80px;
     left: 50%;
     transform: translate(-50%);
     color: var(--tertiary);
     white-space: nowrap;
     font-family: 'DM Serif Display', serif;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 header>nav{
     display: flex;
@@ -209,7 +210,7 @@ footer{
     filter: invert(100%);
 }
 .footer-div>p, img{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .footer-div>h4{
     font-size: 20px;
