@@ -14,6 +14,9 @@ font-family: 'Inter', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
 
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --positive-color: rgb(0, 100, 0);
     --primary: #9A90A9;
@@ -37,7 +40,6 @@ font-family: 'Poppins', sans-serif;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
-    flex-shrink: 0;
     color:inherit;
 }
 body{
@@ -115,7 +117,7 @@ header>nav>a:hover{
 }
 
 #link-escola{
-    margin-top: 130px;
+    margin-top: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,8 +138,10 @@ header>nav>a:hover{
     margin: 2px 7px 2px 16px;
     color: var(--darkgrey);
 }
-.cards>button{
+.cards>a{
     margin: 15px;
+    font-size: 13px;
+    text-align: center;
 }
 .card-header{
     text-align: center;
@@ -150,14 +154,56 @@ header>nav>a:hover{
     font-size: 17px;
     color: var(--tertiary);
     margin-bottom: 3px;
+    font-family: 'DM Serif Display', serif;
+    letter-spacing: 0.1em;
 }
-
 #sobre-mim{
     background-color: var(--lightgrey);
-    height: 300px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
 }
-
+#sobre-mim-div{
+    background-color: var(--white);
+    box-shadow: 0 0 0.2em var(--greyer);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#sobre-mim-div>img{
+    border-radius: 5px;
+}
+#sobre-mim-info{
+    margin-left: 20px;
+}
+#sobre-mim-info>h3{
+    color: var(--secondary);
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    margin: 7px 0;
+}
+#sobre-mim-info>p{
+    width: 250px;
+    color: var(--darkgrey);
+}
+#info-date{
+    margin-top: 43px;
+}
 footer{
     height: 200px;
     background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
+}
+
+@media screen and (max-width: 620px){
+    #sobre-mim-div{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 640px){
+    .cards{
+        width: 160px;
+    }
 }
