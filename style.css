@@ -206,7 +206,7 @@ footer{
     align-items: flex-start;
 }
 .footer-div img{
-    filter: invert(90%);
+    filter: invert(100%);
 }
 .footer-div>p, img{
     margin-bottom: 10px;
@@ -234,9 +234,9 @@ footer{
     font-size: 40px;
 }
 #footer-header>img{
-    margin-top: 15px;
-    width: 45px;
-    filter: invert(90%);
+    margin-top: 10px;
+    width: 40px;
+    filter: invert(95%);
 }
 
 @media screen and (max-width: 620px){
