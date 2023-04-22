@@ -67,7 +67,9 @@ body{
 
 header{
     background-image: url(./imagens/header-image.jpg);
-    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:contain;
     position: relative;
     height: 250px;
     box-shadow: 0 0 0.4em var(--greyer);
