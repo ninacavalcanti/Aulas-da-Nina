@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display');
 
 /*
-font-family: 'DM Serif Display', serif; okaaaay
-
+font-family: 'DM Serif Display', serif;
 font-family: 'Inconsolata', monospace;
 font-family: 'Inter', sans-serif;
 font-family: 'Poppins', sans-serif;
@@ -41,6 +37,7 @@ html{
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     color:inherit;
+    flex-shrink: 0;
 }
 body{
     background-color: var(--lightergrey);
@@ -95,7 +92,6 @@ header>h1{
     font-family: 'DM Serif Display', serif;
     letter-spacing: 0.1em;
 }
-
 header>nav{
     display: flex;
     align-items: center;
@@ -117,8 +113,7 @@ header>nav>a:hover{
     width: 1px;
     background-color: var(--tertiary);
 }
-
-#link-escola{
+#modulos-section{
     margin-top: 140px;
     display: flex;
     align-items: center;
@@ -159,13 +154,13 @@ header>nav>a:hover{
     font-family: 'DM Serif Display', serif;
     letter-spacing: 0.1em;
 }
-#sobre-mim{
+#info{
     background-color: var(--lightgrey);
     padding: 20px 30px;
     display: flex;
     justify-content: center;
 }
-#sobre-mim-div{
+#sobre-mim{
     background-color: var(--white);
     box-shadow: 0 0 0.2em var(--greyer);
     padding: 20px;
@@ -174,20 +169,21 @@ header>nav>a:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-shrink: 1;
 }
-#sobre-mim-div>img{
+#sobre-mim>img{
     border-radius: 5px;
 }
-#sobre-mim-info{
+#sobre-mim-text{
     margin-left: 20px;
 }
-#sobre-mim-info>h3{
+#sobre-mim-text>h3{
     color: var(--secondary);
     font-family: 'DM Serif Display', serif;
     font-size: 28px;
     margin: 7px 0;
 }
-#sobre-mim-info>p{
+#sobre-mim-text>p{
     width: 250px;
     color: var(--darkgrey);
 }
@@ -195,12 +191,56 @@ header>nav>a:hover{
     margin-top: 43px;
 }
 footer{
-    height: 200px;
+    padding: 20px;
+    color: var(--tertiary);
     background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.footer-div{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-div img{
+    filter: invert(90%);
+}
+.footer-div>p, img{
+    margin-bottom: 10px;
+}
+.footer-div>h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#footer-header{
+    align-items: center;
+}
+#footer-header>.button{
+    border: 1px solid var(--grey);
+    color: var(--darkgrey);
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
+    color: var(--tertiary);
+}
+#footer-header>.button:hover{
+    border: 1px solid var(--grey);
+    scale: 1.05;
+}
+#footer-header>h3{
+    font-family: 'DM Serif Display', serif;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+}
+#footer-header>img{
+    margin-top: 15px;
+    width: 45px;
+    filter: invert(90%);
 }
 
 @media screen and (max-width: 620px){
-    #sobre-mim-div{
+    #sobre-mim{
         width: 300px;
     }
 }
