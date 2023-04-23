@@ -160,7 +160,7 @@ header>nav>a:hover{
     background-color: var(--lightgrey);
     padding: 30px;
     display: flex;
-
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
 }
