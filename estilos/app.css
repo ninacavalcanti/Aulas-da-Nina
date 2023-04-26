@@ -63,7 +63,7 @@ body{
 /* ============================== */
 
 header{
-    background-image: url(./imagens/header-image.jpg);
+    background-image: url(../imagens/header-image.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size:contain;
@@ -123,7 +123,7 @@ header>nav>a:hover{
     padding: 0 15px;
 }
 .cards{
-    width: 280px;
+    width: 320px;
     margin: 0 10px 30px;
     display: flex;
     flex-direction: column;
@@ -154,44 +154,6 @@ header>nav>a:hover{
     margin-bottom: 3px;
     font-family: 'DM Serif Display', serif;
     letter-spacing: 0.1em;
-}
-
-#info{
-    background-color: var(--lightgrey);
-    padding: 30px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.info-card{
-    margin: 10px;
-    background-color: var(--white);
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 0.5em var(--grey);
-    align-items: flex-start;
-    flex-shrink: 1;
-}
-.info-card>img{
-    margin: 0;
-}
-.info-text{
-    padding: 20px;
-}
-.info-text>h3{
-    font-family: 'DM Serif Display', serif;
-    color: var(--secondary);
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-.info-text>p{
-    width: 640px;
-}
-.info-date{
-    margin-top: 20px;
 }
 
 footer{
@@ -241,18 +203,4 @@ footer{
     margin-top: 10px;
     width: 40px;
     filter: invert(95%);
-}
-
-@media screen and (max-width: 1070px){
-    .info-card{
-        flex-direction: column;
-    }
-    .info-text>p{
-        width: 250px;
-    }
-}
-@media screen and (max-width: 640px){
-    .cards{
-        width: 140px;
-    }
 }
