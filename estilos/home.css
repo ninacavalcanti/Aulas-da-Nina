@@ -34,10 +34,10 @@
     width: 640px;
 }
 .info-date{
-    margin-top: z0px;
+    margin-top: 20px;
 }
 
-@media screen and (max-width: 1070px){
+@media screen and (max-width: 1069px){
     .info-card{
         flex-direction: column;
     }
@@ -55,26 +55,8 @@
         width: 355px;
     }
 }
-@media screen and (max-width: 730px){
-    .cards{
-        width: 270px;
-    }
-}
-@media screen and (max-width: 630px){
-    .cards{
-        width: 215px;
-    }
-}
 @media screen and (max-width: 499px){
-    .cards{
-        width: 170px;
-    }
     .info-text>p{
         width: 250px;
-    }
-}
-@media screen and (max-width: 410px){
-    .cards{
-        width: 140px;
     }
 }

@@ -63,7 +63,7 @@ body{
 /* ============================== */
 
 header{
-    background-image: url(../imagens/header-image.jpg);
+    background-image: url(../imagens/home-imagens/header-image.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size:contain;
@@ -114,6 +114,8 @@ header>nav>a:hover{
     width: 1px;
     background-color: var(--tertiary);
 }
+
+/* CARDS */
 #modulos-section{
     margin-top: 140px;
     display: flex;
@@ -145,8 +147,12 @@ header>nav>a:hover{
     text-align: center;
     background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 20px;
     margin-bottom: 8px;
+}
+.card-header>img{
+    margin: 5px 0;
+    vertical-align: bottom;
 }
 .card-header>h2{
     font-size: 17px;
@@ -156,6 +162,7 @@ header>nav>a:hover{
     letter-spacing: 0.1em;
 }
 
+/* FOOTER */
 footer{
     padding: 20px;
     color: var(--tertiary);
@@ -179,7 +186,7 @@ footer{
 }
 .footer-div>h4{
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 #footer-header{
     align-items: center;
@@ -191,7 +198,6 @@ footer{
     color: var(--tertiary);
 }
 #footer-header>.button:hover{
-    border: 1px solid var(--grey);
     scale: 1.05;
 }
 #footer-header>h3{
@@ -202,5 +208,25 @@ footer{
 #footer-header>img{
     margin-top: 10px;
     width: 40px;
-    filter: invert(95%);
+}
+
+@media screen and (max-width: 730px){
+    .cards{
+        width: 270px;
+    }
+}
+@media screen and (max-width: 630px){
+    .cards{
+        width: 215px;
+    }
+}
+@media screen and (max-width: 499px){
+    .cards{
+        width: 170px;
+    }
+}
+@media screen and (max-width: 410px){
+    .cards{
+        width: 140px;
+    }
 }
