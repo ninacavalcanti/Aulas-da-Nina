@@ -9,7 +9,7 @@ function populateSelect(inst){
 
         SELECT_EL.innerHTML += `
 
-            <option value="${DISCIPLINAS_FILTRADAS[i].id}">${DISCIPLINAS_FILTRADAS[i].nome}</option>
+            <option value="${DISCIPLINAS_FILTRADAS[i].nome}">${DISCIPLINAS_FILTRADAS[i].nome}</option>
 
         `
     }
@@ -17,10 +17,19 @@ function populateSelect(inst){
 
 function filterModules(inst){
 
-    
+    let input_el_value = document.querySelector('input').value
+    let select_el_value = document.querySelector('select').value
 
-    return MATERIAS.filter((materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst)
-
+    if(select_el_value == 0){
+        return MATERIAS.filter(
+            (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
+        )
+    }
+    return MATERIAS.filter(
+        (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
+                && materia.nome.includes(input_el_value)
+                && DISCIPLINAS[materia.disciplina].nome == select_el_value
+        )
 }
 
 function loadModules(inst){
