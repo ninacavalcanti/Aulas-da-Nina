@@ -15,7 +15,7 @@ function loadModules(inst){
         SECTION_EL.innerHTML += `
 
         <div class="cards">
-            <div class="card-header" style="background-color: ${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].cor}; background-image: none;">
+            <div class="card-header" style="border-bottom: 7px solid ${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].cor};">
                 <h2>${MATERIAS_FILTRADAS[i].nome}</h2>
                 <p>${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].nome}</p>
             </div>
@@ -83,7 +83,7 @@ const DISCIPLINAS = [
     },
     {
         id : 3,
-        nome : "Literatura italiana",
+        nome : "Lit. italiana",
         cor : "red",
         instituicao : 'fundacao' //ou 'fundacao'
     },
