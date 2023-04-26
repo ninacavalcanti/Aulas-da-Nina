@@ -15,7 +15,9 @@ function populateSelect(inst){
     }
 }
 
-function filterModules(inst, disc = 0, mat_search = ''){
+function filterModules(inst){
+
+    
 
     return MATERIAS.filter((materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst)
 
