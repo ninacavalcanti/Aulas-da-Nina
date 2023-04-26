@@ -133,7 +133,7 @@ header>nav>a:hover{
     overflow: hidden;
 }
 .cards>p{
-    font-size: 13px;
+    font-size: 16px;
     margin: 3px 16px;
     color: var(--darkgrey);
 }

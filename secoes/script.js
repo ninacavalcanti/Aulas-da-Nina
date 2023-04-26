@@ -1,21 +1,39 @@
-const SECTION_EL = document.querySelector('#modulos-section')
+function populateSelect(inst){
 
-function filterModules(inst){
+    const SELECT_EL = document.querySelector('#section-filtragem select')
+    SELECT_EL.innerHTML = `<option value="0">Todas</option>`
+
+    let DISCIPLINAS_FILTRADAS = DISCIPLINAS.filter((disciplina)=> disciplina.instituicao == inst)
+
+    for(let i=0; i<DISCIPLINAS_FILTRADAS.length; i++){
+
+        SELECT_EL.innerHTML += `
+
+            <option value="${DISCIPLINAS_FILTRADAS[i].id}">${DISCIPLINAS_FILTRADAS[i].nome}</option>
+
+        `
+    }
+}
+
+function filterModules(inst, disc = 0, mat_search = ''){
+
+    return MATERIAS.filter((materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst)
 
 }
 
 function loadModules(inst){
 
-    let MATERIAS_FILTRADAS = MATERIAS.filter((materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst)
-
+    const SECTION_EL = document.querySelector('#modulos-section')
     SECTION_EL.innerHTML = ''
+
+    let MATERIAS_FILTRADAS = filterModules(inst)
 
     for(let i=0; i<MATERIAS_FILTRADAS.length; i++){
 
         SECTION_EL.innerHTML += `
 
         <div class="cards">
-            <div class="card-header" style="border-bottom: 7px solid ${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].cor};">
+            <div class="card-header" style="border-bottom: 5px solid ${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].cor};">
                 <h2>${MATERIAS_FILTRADAS[i].nome}</h2>
                 <p>${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].nome}</p>
             </div>
