@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/app.css">
+    <link rel="stylesheet" href="../estilos/secoes.css">
     <link rel="shortcut icon" href="./imagens/libelula-100x100.png" type="image/x-icon">
     <title>Aulas da Nina</title>
 </head>
-<body>
+<body onload="loadModules('brasileira')">
     <header>
         <nav style="width: 170px">
             <div class="nav-divider"></div>
@@ -18,6 +19,23 @@
         <h1>Escolas<br>brasileiras</h1>
     </header>
 
-    <script type="module" src="./logica/app.js"></script>
+    <section id="section-filtragem">
+        <div>
+            <h2>Disciplina</h2>
+            <select>
+                <option value="0">Todas</option>
+            </select>
+        </div>
+        <div id="input-div">
+            <h2>Matéria</h2>
+            <input type="text">
+        </div>
+    </section>
+
+    <section id="modulos-section">
+
+    </section>
+
+    <script src="./script.js"></script>
 </body>
 </html>

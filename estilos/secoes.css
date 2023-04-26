@@ -1,0 +1,23 @@
+#section-filtragem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 15px;
+}
+#section-filtragem>div{
+    margin: 15px 10px 0;
+    width: 200px;
+}
+#section-filtragem select,input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 6px;
+}
+#section-filtragem h2{
+    font-size: 14px;
+    margin: 0 0 3px 5px;
+}

@@ -117,16 +117,15 @@ header>nav>a:hover{
 
 /* CARDS */
 #modulos-section{
-    margin-top: 140px;
+    margin: 20px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 0 15px;
 }
 .cards{
-    width: 320px;
-    margin: 0 10px 30px;
+    width: 250px;
+    margin: 0 8px 16px;
     display: flex;
     flex-direction: column;
     border-radius: 6px;
@@ -135,11 +134,11 @@ header>nav>a:hover{
 }
 .cards>p{
     font-size: 13px;
-    margin: 2px 7px 2px 16px;
+    margin: 3px 16px;
     color: var(--darkgrey);
 }
 .cards>a{
-    margin: 15px;
+    margin:  10px 15px 15px;
     font-size: 13px;
     text-align: center;
 }
@@ -153,6 +152,12 @@ header>nav>a:hover{
 .card-header>img{
     margin: 5px 0;
     vertical-align: bottom;
+}
+.card-header>p{
+    font-size: 12px;
+    color: var(--tertiary);
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 .card-header>h2{
     font-size: 17px;
@@ -210,22 +215,7 @@ footer{
     width: 40px;
 }
 
-@media screen and (max-width: 730px){
-    .cards{
-        width: 270px;
-    }
-}
-@media screen and (max-width: 630px){
-    .cards{
-        width: 215px;
-    }
-}
-@media screen and (max-width: 499px){
-    .cards{
-        width: 170px;
-    }
-}
-@media screen and (max-width: 410px){
+@media screen and (max-width: 620px){
     .cards{
         width: 140px;
     }
