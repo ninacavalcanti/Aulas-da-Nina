@@ -23,6 +23,7 @@ function filterModules(inst){
     if(select_el_value == 0){
         return MATERIAS.filter(
             (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
+                && materia.nome.includes(input_el_value)
         )
     }
     return MATERIAS.filter(
