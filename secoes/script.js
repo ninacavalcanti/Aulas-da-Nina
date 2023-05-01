@@ -23,12 +23,12 @@ function filterModules(inst){
     if(select_el_value == 0){
         return MATERIAS.filter(
             (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
-                && materia.nome.includes(input_el_value)
+                && materia.nome.toLowerCase().includes(input_el_value.toLowerCase())
         )
     }
     return MATERIAS.filter(
         (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
-                && materia.nome.includes(input_el_value)
+                && materia.nome.toLowerCase().includes(input_el_value.toLowerCase())
                 && DISCIPLINAS[materia.disciplina].nome == select_el_value
         )
 }
@@ -61,34 +61,10 @@ function loadModules(inst){
 
 const MATERIAS = [
     {
-        nome : "Frações",
+        nome : "Álgebra Básica",
         disciplina : 0, //matemática
-        src : "./modulos/teste.html",
-        n_listas : 4
-    },
-    {
-        nome : "Cálculo I",
-        disciplina : 0, //matemática
-        src : "./modulos/teste.html",
-        n_listas : 7
-    },
-    {
-        nome : "Tempos verbais",
-        disciplina : 2, //latim
-        src : "./modulos/teste.html",
-        n_listas : 2
-    },
-    {
-        nome : "Tempos verbais",
-        disciplina : 3, //literatura italiana
-        src : "./modulos/teste.html",
+        src : "./modulos/algebra-basica.html",
         n_listas : 1
-    },
-    {
-        nome : "Figuras de linguagem",
-        disciplina : 1, //português
-        src : "./modulos/teste.html",
-        n_listas : 10
     },
 ]
 
@@ -98,23 +74,5 @@ const DISCIPLINAS = [
         nome : "Matemática",
         cor : "orange",
         instituicao : 'brasileira' //ou 'fundacao'
-    },
-    {
-        id : 1,
-        nome : "Português",
-        cor : "blue",
-        instituicao : 'brasileira' //ou 'fundacao'
-    },
-    {
-        id : 2,
-        nome : "Latim",
-        cor : "green",
-        instituicao : 'fundacao' //ou 'fundacao'
-    },
-    {
-        id : 3,
-        nome : "Lit. italiana",
-        cor : "red",
-        instituicao : 'fundacao' //ou 'fundacao'
     },
 ]

@@ -1,0 +1,25 @@
+#downloads{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.lista-div{
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0.2em var(--grey);
+}
+.lista-div>img{
+    filter: invert(50%);
+    margin: 0;
+}
+.lista-div>p{
+    margin-right: 15px;
+    color: var(--darkgrey)
+}
