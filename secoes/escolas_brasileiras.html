@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./imagens/libelula-100x100.png" type="image/x-icon">
     <title>Aulas da Nina</title>
 </head>
-<body onload="loadModules('brasileira'); populateSelect('brasileira')">
+<body class='brasileira'>
     <header>
         <nav style="width: 170px">
             <div class="nav-divider"></div>
@@ -22,13 +22,13 @@
     <section id="section-filtragem">
         <div>
             <h2>Disciplina</h2>
-            <select oninput="loadModules('brasileira')">
+            <select id='search-select'>
 
             </select>
         </div>
         <div id="input-div">
             <h2>Matéria</h2>
-            <input placeholder="Buscar por matéria..." type="text" oninput="loadModules('brasileira')">
+            <input id='search-input' placeholder="Buscar por matéria..." type="text">
         </div>
     </section>
 
@@ -36,6 +36,6 @@
 
     </section>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module" defer></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+import { MATERIAS, DISCIPLINAS} from './data.js'
+
 function populateSelect(inst){
 
     const SELECT_EL = document.querySelector('#section-filtragem select')
@@ -23,12 +25,12 @@ function filterModules(inst){
     if(select_el_value == 0){
         return MATERIAS.filter(
             (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
-                && materia.nome.toLowerCase().includes(input_el_value.toLowerCase())
+                && materia.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(input_el_value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
         )
     }
     return MATERIAS.filter(
         (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
-                && materia.nome.toLowerCase().includes(input_el_value.toLowerCase())
+                && materia.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(input_el_value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
                 && DISCIPLINAS[materia.disciplina].nome == select_el_value
         )
 }
@@ -57,22 +59,21 @@ function loadModules(inst){
     }
 }
 
-// DATABASE =========================================================== |
+const main = ()=> {
+    let escola
+    if(document.body.classList.contains('brasileira')){
+        escola = 'brasileira'
+    }else{
+        escola = 'fundacao'
+    }
 
-const MATERIAS = [
-    {
-        nome : "Álgebra Básica",
-        disciplina : 0, //matemática
-        src : "./modulos/algebra-basica.html",
-        n_listas : 1
-    },
-]
+    window.addEventListener('load', ()=> {
+        loadModules(escola)
+        populateSelect(escola)
+    })
 
-const DISCIPLINAS = [
-    {
-        id : 0,
-        nome : "Matemática",
-        cor : "orange",
-        instituicao : 'brasileira' //ou 'fundacao'
-    },
-]
+    document.querySelector('#search-select').addEventListener('input', ()=> loadModules(escola))
+    document.querySelector('#search-input').addEventListener('input', ()=> loadModules(escola))
+}
+
+main()
