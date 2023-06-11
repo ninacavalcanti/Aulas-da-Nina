@@ -51,8 +51,7 @@ function loadModules(inst){
                 <h2>${MATERIAS_FILTRADAS[i].nome}</h2>
                 <p>${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].nome}</p>
             </div>
-            <p>${MATERIAS_FILTRADAS[i].n_listas} lista(s)</p>
-            <a href="${MATERIAS_FILTRADAS[i].src}" class="button">Acessar</a>
+            <a href="${MATERIAS_FILTRADAS[i].src}" download="${MATERIAS_FILTRADAS[i].file}" type="application/pdf" class="button">Download</a>
         </div>
 
         `

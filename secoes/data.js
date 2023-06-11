@@ -2,8 +2,8 @@ export const MATERIAS = [
     {
         nome : "Álgebra Básica",
         disciplina : 0, //matemática
-        src : "./modulos/algebra-basica.html",
-        n_listas : 1
+        src : "./modulos/portugues/analise_sintatica.pdf",
+        file : "analise-sintatica.pdf"
     },
 ]
 
