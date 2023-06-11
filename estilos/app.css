@@ -119,7 +119,7 @@ header>nav>a:hover{
 #modulos-section{
     margin: 20px 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -146,7 +146,7 @@ header>nav>a:hover{
     text-align: center;
     background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 12px;
     margin-bottom: 8px;
 }
 .card-header>img{
@@ -154,13 +154,13 @@ header>nav>a:hover{
     vertical-align: bottom;
 }
 .card-header>p{
-    font-size: 12px;
+    font-size: 11px;
     color: var(--tertiary);
     font-weight: bold;
     letter-spacing: 0.1em;
 }
 .card-header>h2{
-    font-size: 17px;
+    font-size: 13px;
     color: var(--tertiary);
     margin-bottom: 3px;
     font-family: 'DM Serif Display', serif;

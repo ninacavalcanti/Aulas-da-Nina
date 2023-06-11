@@ -1,4 +1,4 @@
-import { MATERIAS, DISCIPLINAS} from './data.js'
+import { CARDS, DISCIPLINAS} from './data.js'
 
 function populateSelect(inst){
 
@@ -23,15 +23,15 @@ function filterModules(inst){
     let select_el_value = document.querySelector('select').value
 
     if(select_el_value == 0){
-        return MATERIAS.filter(
-            (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
-                && materia.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(input_el_value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
+        return CARDS.filter(
+            (card)=> DISCIPLINAS[card.disciplina].instituicao == inst
+                && card.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(input_el_value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
         )
     }
-    return MATERIAS.filter(
-        (materia)=> DISCIPLINAS[materia.disciplina].instituicao == inst
-                && materia.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(input_el_value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
-                && DISCIPLINAS[materia.disciplina].nome == select_el_value
+    return CARDS.filter(
+        (card)=> DISCIPLINAS[card.disciplina].instituicao == inst
+                && card.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(input_el_value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
+                && DISCIPLINAS[card.disciplina].nome == select_el_value
         )
 }
 
@@ -40,18 +40,18 @@ function loadModules(inst){
     const SECTION_EL = document.querySelector('#modulos-section')
     SECTION_EL.innerHTML = ''
 
-    let MATERIAS_FILTRADAS = filterModules(inst)
+    let CARDS_FILTRADAS = filterModules(inst)
 
-    for(let i=0; i<MATERIAS_FILTRADAS.length; i++){
+    for(let i=0; i<CARDS_FILTRADAS.length; i++){
 
         SECTION_EL.innerHTML += `
 
         <div class="cards">
-            <div class="card-header" style="border-bottom: 5px solid ${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].cor};">
-                <h2>${MATERIAS_FILTRADAS[i].nome}</h2>
-                <p>${DISCIPLINAS[MATERIAS_FILTRADAS[i].disciplina].nome}</p>
+            <div class="card-header" style="border-bottom: 5px solid ${DISCIPLINAS[CARDS_FILTRADAS[i].disciplina].cor};">
+                <h2>${CARDS_FILTRADAS[i].nome}</h2>
+                <p>${DISCIPLINAS[CARDS_FILTRADAS[i].disciplina].nome}</p>
             </div>
-            <a href="${MATERIAS_FILTRADAS[i].src}" download="${MATERIAS_FILTRADAS[i].file}" type="application/pdf" class="button">Download</a>
+            <a href="${CARDS_FILTRADAS[i].src}" download="${CARDS_FILTRADAS[i].file}" type="application/pdf" class="button">Download</a>
         </div>
 
         `
